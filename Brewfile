@@ -2,6 +2,7 @@ tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "sass/sass"
@@ -41,7 +42,7 @@ brew "hub"
 brew "imagemagick"
 brew "libxslt"
 brew "luarocks"
-brew "postgresql", restart_service: true
+brew "postgresql"
 brew "mapnik"
 brew "mas"
 brew "protobuf"
@@ -64,6 +65,7 @@ brew "youtube-dl"
 brew "zlib"
 brew "heroku/brew/heroku"
 cask "1password"
+cask "discord"
 cask "firefox"
 cask "font-fira-code-nerd-font"
 cask "google-chrome"
@@ -73,6 +75,7 @@ cask "slack"
 cask "visual-studio-code"
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
+mas "Fantastical", id: 975937182
 mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
