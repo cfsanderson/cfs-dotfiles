@@ -41,6 +41,8 @@ plugins=(
 # custom folder
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
+# aliases moved to ~/.oh-my-zsh/custom/aliases.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # ASDF

@@ -26,6 +26,7 @@ alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true &&
 alias showpaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder'
 alias sourcezsh='source ~/.zshrc'
 alias st='speedtest'
+alias startmeup='zsh ~/.config/iterm/startup-ascii.sh'
 alias timez='date “+EST: %H:%M” && TZ=America/Chicago date “+CST: %H:%M” && TZ=America/Denver date “+MST: %H:%M” && TZ=America/Los_Angeles date “+PST: %H:%M”'
 alias to=touch_open
 touch_open() {
