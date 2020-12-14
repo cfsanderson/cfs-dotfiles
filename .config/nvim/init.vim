@@ -12,6 +12,10 @@
 "                       /_/_/ /_/_/\__/ |___/_/_/ /_/ /_/ 
 "===============================================================================
 
+if exists('g:vscode')
+    " VSCode extension
+else
+
 source $HOME/.config/nvim/plug-config/coc.vim
 
 syntax on
@@ -196,3 +200,5 @@ map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
+
+endif

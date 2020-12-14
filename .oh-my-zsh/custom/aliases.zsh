@@ -1,5 +1,6 @@
 # oh-my-zsh custom aliases
 
+alias alius='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias bbd='brew bundle dump -f'
 alias brave='open -a "Brave Browser"'
 alias c='clear'

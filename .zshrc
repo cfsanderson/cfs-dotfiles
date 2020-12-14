@@ -15,6 +15,7 @@
 
 # Path to my oh-my-zsh installation
 export ZSH="/Users/calebsanderson/.oh-my-zsh"
+export PATH="/usr/local/sbin:$PATH"
 
 ZSH_THEME="amuse"
 

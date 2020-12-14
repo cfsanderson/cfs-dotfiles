@@ -42,8 +42,6 @@ brew "hub"
 brew "imagemagick"
 brew "libxslt"
 brew "luarocks"
-brew "postgresql"
-brew "mapnik"
 brew "mas"
 brew "protobuf"
 brew "mysql"
@@ -51,6 +49,7 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "nmap"
 brew "perl"
+brew "postgresql"
 brew "protobuf-c"
 brew "postgis"
 brew "redis"
@@ -76,7 +75,6 @@ cask "visual-studio-code"
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Fantastical", id: 975937182
-mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
 mas "NordVPN IKE", id: 1116599239
