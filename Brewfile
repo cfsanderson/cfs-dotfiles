@@ -57,7 +57,6 @@ brew "ripgrep"
 brew "speedtest-cli"
 brew "tidy-html5"
 brew "tldr"
-brew "trash-cli"
 brew "tree"
 brew "unzip"
 brew "youtube-dl"
@@ -72,6 +71,7 @@ cask "iterm2"
 cask "postgres"
 cask "slack"
 cask "visual-studio-code"
+cask "vnc-viewer"
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Fantastical", id: 975937182
