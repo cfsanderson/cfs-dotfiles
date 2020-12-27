@@ -14,6 +14,8 @@ alias gs='git switch'
 alias home='~ && ls -la'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias hidepaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool false; killall Finder'
+alias calibpi='ssh calib@192.168.254.100'
+alias rootpi='ssh root@192.168.254.100'
 alias mkcdir=mkdir_cd
 mkdir_cd() {
     mkdir -p -- "$1" &&
