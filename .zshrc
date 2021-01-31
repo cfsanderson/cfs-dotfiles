@@ -17,7 +17,7 @@
 export ZSH="/Users/calebsanderson/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
 
-ZSH_THEME="amuse"
+ZSH_THEME=agnoster
 
 setopt autocd
 setopt noclobber

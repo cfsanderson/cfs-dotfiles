@@ -71,11 +71,9 @@ cask "iterm2"
 cask "postgres"
 cask "slack"
 cask "visual-studio-code"
-cask "vnc-viewer"
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
 mas "Fantastical", id: 975937182
-mas "iMovie", id: 408981434
 mas "Kindle", id: 405399194
 mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
