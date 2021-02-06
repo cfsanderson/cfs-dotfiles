@@ -3830,6 +3830,8 @@
 				<key>Red Component</key>
 				<real>0.83921569585800171</real>
 			</dict>
+			<key>Minimum Contrast</key>
+			<real>0.26336422958815031</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -5491,8 +5493,12 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.31322307180851072</real>
+	<key>StatusBarPosition</key>
+	<integer>0</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
+	<key>TabViewType</key>
+	<integer>0</integer>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WordCharacters</key>
