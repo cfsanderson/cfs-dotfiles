@@ -1,6 +1,6 @@
 # oh-my-zsh custom aliases
 
-alias alacritty='cd ~/.config/alacritty && vim .'
+alias alacritty='cd ~/.config/alacritty && vim alacritty.yml'
 alias alius='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias bbd='brew bundle dump -f'
 alias brave='open -a "Brave Browser"'
