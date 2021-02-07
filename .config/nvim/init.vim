@@ -65,6 +65,18 @@ if has('termguicolors')
   set termguicolors
 endif
 
+" Gruvbox Material theme
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_disable_italic_comment = 0
+let g:gruvbox_material_menu_selection_background = 'green'
+let g:gruvbox_material_palette = 'material'
+let g:gruvbox_material_sign_column_background = 'none'
+
+colorscheme gruvbox-material
+
+set background=dark
+
 " Goyo settings
 let g:goyo_width = 120
 function! s:goyo_enter()
@@ -191,16 +203,6 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
-" Gruvbox Material theme
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_disable_italic_comment = 0
-let g:gruvbox_material_menu_selection_background = 'green'
-let g:gruvbox_material_palette = 'material'
-let g:gruvbox_material_sign_column_background = 'none'
-
-colorscheme gruvbox-material
-set background=dark
 
 " jsx syntax highlighting
 " dark red
