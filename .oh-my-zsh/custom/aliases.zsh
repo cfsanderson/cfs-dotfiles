@@ -1,16 +1,19 @@
 # oh-my-zsh custom aliases
 
-alias alacritty='cd ~/.config/alacritty && vim alacritty.yml'
-alias alius='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias bbd='brew bundle dump -f'
 alias brave='open -a "Brave Browser"'
 alias c='clear'
 alias calebpi='ssh pi@calebpi.local'
 alias chrome='open -a "Google Chrome"'
 alias conf='/usr/bin/git --git-dir=/Users/calebsanderson/.cfs-dotfiles/ --work-tree=/Users/calebsanderson'
+alias confalias='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
+alias confalacritty='cd ~/.config/alacritty && vim alacritty.yml'
 alias confstat='conf status'
+alias conftmux='vim ~/.tmux.conf'
 alias conflog='conf log'
 alias confloga='conf log --oneline --decorate --graph --all'
+alias confvim='vim ~/.config/nvim/init.vim'
+alias confzsh='vim ~/.zshrc'
 alias firefox='open -a "Firefox"'
 alias gs='git switch'
 alias home='cd ~ && clear && neofetch'
@@ -43,5 +46,3 @@ touch_open() {
 }
 alias tp='trash-put'
 alias vim='nvim'
-alias vimrc='nvim ~/.config/nvim/init.vim'
-alias zshrc='nvim ~/.zshrc'
