@@ -16,7 +16,7 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.99
+background_opacity: 1.0
 
 # Font configuration
 font:
