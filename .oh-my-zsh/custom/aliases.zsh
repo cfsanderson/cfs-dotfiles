@@ -11,7 +11,6 @@
 alias bbd='brew bundle dump -f'
 alias brave='open -a "Brave Browser"'
 alias c='clear'
-alias calebpi='ssh pi@calebpi.local'
 alias chrome='open -a "Google Chrome"'
 alias conf='/usr/bin/git --git-dir=/Users/calebsanderson/.cfs-dotfiles/ --work-tree=/Users/calebsanderson'
 alias confalias='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
@@ -27,7 +26,7 @@ alias gs='git switch'
 alias home='cd ~ && clear && neofetch'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias hidepaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool false; killall Finder'
-alias rootpi='ssh root@192.168.254.100'
+alias kali='ssh caleb@192.168.254.23'
 alias mkcdir=mkdir_cd
 mkdir_cd() {
     mkdir -p -- "$1" &&
@@ -36,6 +35,7 @@ mkdir_cd() {
 }
 alias myhub='open https://github.com/cfsanderson'
 alias notes='cd ~/Projects/.notes && nvim .'
+alias pihole='ssh pi@calebpi.local'
 alias preview='open -a Preview'
 alias rootpi='ssh root@192.168.254.100'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'

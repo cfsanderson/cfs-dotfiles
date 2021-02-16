@@ -58,6 +58,7 @@ Plug '~/.config/nvim/unmanaged-plugins/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'https://github.com/ap/vim-css-color'
 
 call plug#end()
 
@@ -283,6 +284,9 @@ nmap <leader>gf :diffget //2<CR>
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-U> :nohl<CR><C-U>
+
+" toggle search highlight
+nnoremap <F3> :set hlsearch!<CR>
 
 " remap change split to just ctrl + {h,j,k,l}
 map <C-H> <C-W><C-H>
