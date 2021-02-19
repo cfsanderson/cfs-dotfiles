@@ -41,6 +41,12 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 source $ZSH/oh-my-zsh.sh
 
+# Tmux
+if [ $(tty) == /dev/tty1 ]; then
+  /usr/bin/tmux new -s 0
+  /usr/bin/tmux attach -t 0
+fi
+
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
