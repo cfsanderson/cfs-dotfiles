@@ -103,11 +103,6 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 "" Markdown Preview
-"let g:mkdp_auto_start = 0
-"let g:mkdp_refresh_slow = 0
-"let g:mkdp_browser = ''
-"let g:mkdp_markdown_css = '~/.config/nvim/darkdown.css'
-"
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
 let g:mkdp_auto_start = 0
@@ -182,7 +177,7 @@ let g:mkdp_preview_options = {
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = ''
+let g:mkdp_markdown_css = '~/.config/nvim/darkdown.css'
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
