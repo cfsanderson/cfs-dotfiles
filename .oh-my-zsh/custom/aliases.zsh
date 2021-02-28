@@ -27,6 +27,7 @@ alias home='cd ~ && clear && neofetch'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias hidepaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool false; killall Finder'
 alias kali='ssh caleb@192.168.254.23'
+alias l='ls -lA'
 alias mkcdir=mkdir_cd
 mkdir_cd() {
     mkdir -p -- "$1" &&
