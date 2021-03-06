@@ -34,6 +34,7 @@ mkdir_cd() {
     cd -P -- "$1" &&
     ls -la
 }
+alias music='cmus'
 alias myhub='open https://github.com/cfsanderson'
 alias notes='cd ~/Projects/.notes && nvim .'
 alias pihole='ssh pi@calebpi.local'
