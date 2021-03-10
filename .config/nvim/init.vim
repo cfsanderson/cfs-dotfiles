@@ -9,7 +9,7 @@
 "                               @cfsanderson
 
 if exists('g:vscode')
-    " VSCode extension
+  VSCode extension
 else
 
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -246,7 +246,7 @@ nmap <CR> o<Esc>
 
 " let g:UltiSnipsExpandTrigger = '<nop>'
 
-" `gc` comments out a selection
+" gc comments out a selection
 
 " " Coc-rename
 nmap <leader>rr <Plug>(coc-rename)
