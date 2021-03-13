@@ -11,20 +11,21 @@
 # Window Customizations
 window:
   dimensions:
-    columns: 235
-    lines: 60
+    columns: 118
+    lines: 30
   position:
     x: 0
     y: 0
   padding:
     x: 15
     y: 15
-  decorations: none
-  startup_mode: Maximized
+  decorations: full
+  startup_mode: Windowed
 scrolling:
   history: 10000
   multiplier: 3
 background_opacity: 1.0
+title: cfsanderson
 
 # Font configuration
 font:
