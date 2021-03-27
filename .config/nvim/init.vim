@@ -50,6 +50,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'nvim-lua/completion-nvim'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -78,6 +80,11 @@ let g:gruvbox_material_sign_column_background = 'none'
 colorscheme gruvbox-material
 
 set background=dark
+
+" LSP
+"lua require'nvim_lsp'.tsserver.setup{ }
+"lua require('lspconfig').tsserver.setup{…}
+
 
 " Goyo settings
 let g:goyo_width = 120
