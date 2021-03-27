@@ -47,6 +47,7 @@ brew "gnupg"
 brew "hub"
 brew "imagemagick"
 brew "libxslt"
+brew "luajit", args: ["HEAD"]
 brew "luarocks"
 brew "mas"
 brew "protobuf"
