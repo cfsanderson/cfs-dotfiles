@@ -1,4 +1,3 @@
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -27,10 +26,8 @@ brew "libass"
 brew "srt"
 brew "ffmpeg"
 brew "cmus"
-brew "cowsay"
 brew "curl"
 brew "emscripten"
-brew "fortune"
 brew "geos"
 brew "libxml2"
 brew "libdap"
@@ -79,17 +76,11 @@ cask "discord"
 cask "firefox"
 cask "firefox-developer-edition"
 cask "font-fira-code-nerd-font"
-cask "google-chrome"
-cask "iterm2"
 cask "postgres"
 cask "slack"
-cask "visual-studio-code"
 mas "Airmail", id: 918858936
 mas "Amphetamine", id: 937984704
-mas "Clock mini", id: 867539680
 mas "Fantastical", id: 975937182
 mas "Kindle", id: 405399194
 mas "NordVPN IKE", id: 1116599239
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835

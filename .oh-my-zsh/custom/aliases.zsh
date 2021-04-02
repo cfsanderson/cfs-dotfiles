@@ -10,7 +10,7 @@
 
 alias bbd='brew bundle dump -f'
 alias brave='open -a "Brave Browser"'
-alias conf='/usr/bin/git --git-dir=/Users/calebsanderson/.cfs-dotfiles/ --work-tree=/Users/calebsanderson'
+alias conf='/usr/bin/git --git-dir=/Users/caleb/.cfs-dotfiles/ --work-tree=/Users/caleb'
 alias confalias='vim $HOME/.oh-my-zsh/custom/aliases.zsh'
 alias confalacritty='cd ~/.config/alacritty && vim alacritty.yml'
 alias confstat='conf status'

@@ -9,10 +9,10 @@
 #                               @cfsanderson
 
 # Path to my oh-my-zsh installation
-export ZSH="/Users/calebsanderson/.oh-my-zsh"
+export ZSH="/Users/caleb/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
 
-ZSH_THEME=amuse
+ZSH_THEME="amuse"
 
 setopt autocd
 setopt noclobber
@@ -45,3 +45,4 @@ source $ZSH/oh-my-zsh.sh
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 neofetch
+source /Users/caleb/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

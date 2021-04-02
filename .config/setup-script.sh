@@ -59,7 +59,6 @@ echo "=====                       WARNING:                       ====="
 echo "=====     this may have backed up the existing .zshrc      ====="
 echo "=====    to .zshrc.pre-oh-my-zsh. Change it back if so.    ====="
 echo "=====          Next Step: Install Powerline fonts          ====="
-echo "===== curl -Lks http://bit.do/cfsanderson-powerline | zsh ====="
 
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
@@ -67,24 +66,16 @@ cd fonts
 cd ..
 rm -rf fonts
 
-echo "===== Next: install global NPM packages              ====="
-echo "===== curl -Lks http://bit.do/cfsanderson-nvm | zsh ====="
-
-npm install --global trash-cli
-npm install -g nodemon
-npm install -g gatsby-cli
-
 echo "===== Next Step: generate SSH keys       ====="
-echo "===== curl http://bit.do/cfsanderson-ssh ====="
 
-# generate new keys
-echo "===== after keygen, press enter to leave in default folder ====="
-echo "===== go to 'GitHub > settings > SSH and GPG keys' and delete old SSH key and click on 'New SSH Key' button. ====="
-echo "===== 'pbcopy < ~/.ssh/id_rsa.pub' to copy the contents of rsa.pub and paste into Github ====="
-echo "===== Next: Fix all those settings! ====="
+# generate new keys - https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys
 
 ssh-keygen -t rsa -b 4096 -C "calebsanderson@icloud.com"
 
 eval "$(ssh-agent -s)"
 
 ssh-add ~/.ssh/id_rsa
+
+pbcopy < ~/.ssh/id_ed25519.pub
+
+echo "===== Next: Fix all those settings! ====="
