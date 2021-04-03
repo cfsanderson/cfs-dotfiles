@@ -41,7 +41,7 @@ font:
   bold_italic:
     family: FiraCode Nerd Font
     style: Bold Italic
-  size: 13.0
+  size: 12.5
   offset:
     x: 0
     y: 0

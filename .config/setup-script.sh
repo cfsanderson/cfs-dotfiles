@@ -78,4 +78,17 @@ ssh-add ~/.ssh/id_rsa
 
 pbcopy < ~/.ssh/id_ed25519.pub
 
+echo "===== Next: install trash-cli  ====="
+
+pip3 install trash-cli
+
+# Yarn
+npm install -g yarn
+
+# vim 
+# install vim-plug
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 echo "===== Next: Fix all those settings! ====="

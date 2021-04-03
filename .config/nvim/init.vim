@@ -7,9 +7,6 @@
 "                                                  
 "===============================================================================
 "                               @cfsanderson
-if exists('g:vscode')
-  VSCode extension
-else
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
@@ -142,7 +139,7 @@ let g:mkdp_open_ip = ''
 
 " specify browser to open preview page
 " default: ''
-let g:mkdp_browser = ''
+let g:mkdp_browser = 'Firefox'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
@@ -294,5 +291,3 @@ map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
-
-endif
