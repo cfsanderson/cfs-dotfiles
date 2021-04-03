@@ -26,6 +26,7 @@ SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
 plugins=(
+    asdf
     git
     npm
     osx
@@ -34,15 +35,13 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-# custom folder
+# custom folder - includes aliases
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-
-# aliases moved to ~/.oh-my-zsh/custom/aliases.zsh
 
 source $ZSH/oh-my-zsh.sh
 
 # ASDF
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 . /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
 neofetch
-# source /Users/caleb/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

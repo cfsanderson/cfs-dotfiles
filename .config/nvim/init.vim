@@ -90,7 +90,7 @@ function! s:goyo_enter()
   set noshowmode
   set noshowcmd
   set scrolloff=999
-  "execute "MarkdownPreview"
+  execute "MarkdownPreview"
 endfunction
 
 function! s:goyo_leave()
@@ -99,7 +99,7 @@ function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
-  "execute "MarkdownPreviewStop"
+  execute "MarkdownPreviewStop"
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -180,7 +180,7 @@ let g:mkdp_preview_options = {
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
-let g:mkdp_markdown_css = '~/.config/nvim/darkdown.css'
+" let g:mkdp_markdown_css = '~/.config/nvim/darkdown.css'
 
 " use a custom highlight style must absolute path
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
