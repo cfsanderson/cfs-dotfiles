@@ -38,6 +38,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close a tab if NerdTree is the last thing running
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 call plug#begin(stdpath('config') . '/plugged')
 
@@ -232,8 +235,8 @@ let g:airline_theme = 'gruvbox_material'
 let mapleader = "\<Space>"
 
 " set Python Providers
-let g:python_host_prog  = '/Users/calebsanderson/.asdf/shims/python2'
-let g:python3_host_prog = '/Users/calebsanderson/.asdf/shims/python3'
+let g:python_host_prog = '/Users/caleb/.asdf/shims/python2'
+let g:python3_host_prog = '/Users/caleb/.asdf/shims/python3'
 
 " make return and shift+return open  up new lines above and below respectively
 " without going into insert mode.
