@@ -53,4 +53,5 @@ touch_open() {
         : > "$1" && nvim "$1"
 }
 alias tp='trash-put'
-alias vim='nvim'
+alias v='nvim'
+alias vog='vim'
