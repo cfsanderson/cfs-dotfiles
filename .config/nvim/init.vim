@@ -7,6 +7,11 @@
 "                                                  
 "===============================================================================
 "                               @cfsanderson
+" TODO: 
+" - install emmet
+" - LSP
+" - get rid of Coc?
+" - setup undodir?
 
 source $HOME/.config/nvim/plug-config/coc.vim
 
@@ -28,7 +33,6 @@ set smartcase
 set splitbelow
 set splitright
 set tabstop=2 softtabstop=2 expandtab
-set undodir=~/.vim/undodir
 
 highlight Comment cterm=italic
 
@@ -294,3 +298,9 @@ map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
+
+" TODO: 
+" - LSP
+" - undodir?
+" - get rid of Coc?
+" - install emmet
