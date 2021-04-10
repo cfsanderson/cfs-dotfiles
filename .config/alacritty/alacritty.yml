@@ -24,7 +24,9 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
+
 background_opacity: 1.0
+
 title: cfsanderson
 
 # Font configuration
