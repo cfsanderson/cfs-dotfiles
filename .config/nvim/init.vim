@@ -238,10 +238,6 @@ let g:airline_theme = 'gruvbox_material'
 " Leader
 let mapleader = "\<Space>"
 
-" set Python Providers
-let g:python_host_prog = '/Users/caleb/.asdf/shims/python2'
-let g:python3_host_prog = '/Users/caleb/.asdf/shims/python3'
-
 " make return and shift+return open  up new lines above and below respectively
 " without going into insert mode.
 " nmap <C-o> O<Esc>
