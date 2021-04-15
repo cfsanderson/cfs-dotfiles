@@ -20,7 +20,7 @@ window:
     x: 15
     y: 15
   decorations: full
-  startup_mode: Windowed
+  startup_mode: Maximized
 scrolling:
   history: 10000
   multiplier: 3
