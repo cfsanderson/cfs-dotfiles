@@ -84,8 +84,8 @@ cask "postgres"
 cask "slack"
 cask "steam"
 mas "Airmail", id: 918858936
-mas "Amphetamine", id: 937984704
 mas "Fantastical", id: 975937182
 mas "Kindle", id: 405399194
 mas "NordVPN IKE", id: 1116599239
+mas "Numbers", id: 409203825
 mas "Xcode", id: 497799835
