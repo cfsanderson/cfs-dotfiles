@@ -85,6 +85,7 @@ cask "slack"
 cask "steam"
 mas "Airmail", id: 918858936
 mas "Fantastical", id: 975937182
+mas "Flow", id: 1423210932
 mas "Kindle", id: 405399194
 mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
