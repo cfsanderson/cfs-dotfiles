@@ -283,20 +283,14 @@ nmap <leader>gs :G<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-U> :nohl<CR><C-U>
-
 " toggle search highlight
 nnoremap <F3> :set hlsearch!<CR>
+
+" clear search pattern
+:command C let @/ = ""
 
 " remap change split to just ctrl + {h,j,k,l}
 map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
-
-" TODO: 
-" - LSP
-" - undodir?
-" - get rid of Coc?
-" - install emmet
