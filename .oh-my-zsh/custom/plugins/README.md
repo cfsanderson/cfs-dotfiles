@@ -1,1 +1,0 @@
-Using [zsh-completions](https://github.com/zsh-users/zsh-completions#oh-my-zsh) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh) here. Download both repos and drop in this directory.
