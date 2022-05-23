@@ -24,18 +24,20 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "heroku/brew/heroku"
 brew "teamookla/speedtest/speedtest"
-cask "1password"
 cask "alacritty"
 cask "alfred"
 cask "amethyst"
-cask "brave-browser"
-cask "dropbox"
 cask "karabiner-elements"
 cask "slack"
 mas "Airmail", id: 918858936
 mas "Cardhop", id: 1290358394
 mas "Fantastical", id: 975937182
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "NordVPN", id: 905953485
 mas "NordVPN IKE", id: 1116599239
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
