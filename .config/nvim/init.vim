@@ -38,12 +38,12 @@ highlight Comment cterm=italic
 " NERDTREE
 autocmd StdinReadPre * let s:std_in=1
 " Open NERDTree by default when vim starts up if no files specified
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close a tab if NerdTree is the last thing running
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-"autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-"    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 call plug#begin('~/.vim/plugged')
 
@@ -308,8 +308,17 @@ nnoremap <F3> :set hlsearch!<CR>
 " clear search pattern
 :command C let @/ = ""
 
+" use F2 to insert current date in 'Day DD Mon YYYY' format
+nmap <F2> i<C-R>=strftime("%a %d %b %Y")<CR><Esc>
+imap <F2> <C-R>=strftime("%a %d %b %Y")<CR>
+
+" use F3 to insert current time
+nmap <F3> i<C-R>=strftime("%H:%M:%S")<CR><Esc>
+imap <F3> <C-R>=strftime("%H:%M:%S")<CR>
+
 " remap change split to just ctrl + {h,j,k,l}
 map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
+
