@@ -63,6 +63,7 @@ Plug '~/.config/nvim/unmanaged-plugins/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug '~/.config/nvim/unmanaged-plugins/vim-css-color'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'tools-life/taskwiki'
 
 call plug#end()
 
@@ -216,6 +217,9 @@ let g:vimwiki_markdown_link_ext = 1
 
 let g:taskwiki_markup_syntax = 'markdown'
 let g:markdown_folding = 1
+
+" changes to Discount markdown to HTML converter - http://www.pell.portland.or.us/~orc/Code/discount/
+let g:vimwiki_customwiki2html=$HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
 
 "" flash yank highlight = great visual feedback
 augroup highlight_yank
