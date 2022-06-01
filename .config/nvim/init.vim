@@ -42,8 +42,8 @@ autocmd StdinReadPre * let s:std_in=1
 " Automatically close a tab if NerdTree is the last thing running
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+"autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+"   \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 call plug#begin('~/.vim/plugged')
 
@@ -207,19 +207,26 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " VimWiki
 " ------------------------------------------------------------------------------
 
+" Suggested setting via vimwiki_markdown - https://github.com/patrickdavey/vimwiki_markdown#setup
+"let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/', 'template_path': '~/vimwiki/templates/',
+"          \ 'template_default': 'default', 'syntax': 'markdown', 'ext': '.md',
+"          \ 'path_html': '~/Dropbox/share-work/vimwiki/site_html/', 'custom_wiki2html': 'vimwiki_markdown',
+"          \ 'html_filename_parameterization': 1,
+"          \ 'template_ext': '.tpl'}]
+
 "let g:vimwiki_list = [{'path': '~/vimwiki/',
 "                      \ 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/'}]
+"let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 " Makes vimwiki markdown links as [text](text.md) instead of [text](text)
-let g:vimwiki_markdown_link_ext = 1
+"let g:vimwiki_markdown_link_ext = 1
 
-let g:taskwiki_markup_syntax = 'markdown'
-let g:markdown_folding = 1
+"let g:taskwiki_markup_syntax = 'markdown'
+"let g:markdown_folding = 1
 
 " changes to Discount markdown to HTML converter - http://www.pell.portland.or.us/~orc/Code/discount/
-let g:vimwiki_customwiki2html=$HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
+" let g:vimwiki_customwiki2html=$HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
 
 "" flash yank highlight = great visual feedback
 augroup highlight_yank
