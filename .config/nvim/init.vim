@@ -313,11 +313,8 @@ nmap <leader>gs :G<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 
-" toggle search highlight
-nnoremap <F3> :set hlsearch!<CR>
-
-" clear search pattern
-:command C let @/ = ""
+" use F1 to toggle search highlight
+nnoremap <F1> :set hlsearch!<CR>
 
 " use F2 to insert current date in 'Day DD Mon YYYY' format
 nmap <F2> i<C-R>=strftime("%a %d %b %Y")<CR><Esc>
@@ -332,4 +329,3 @@ map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
-
