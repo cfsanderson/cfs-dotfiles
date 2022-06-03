@@ -37,13 +37,8 @@ highlight Comment cterm=italic
 
 " NERDTREE
 autocmd StdinReadPre * let s:std_in=1
-" Open NERDTree by default when vim starts up if no files specified
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close a tab if NerdTree is the last thing running
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-"autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-"   \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 call plug#begin('~/.vim/plugged')
 
@@ -99,14 +94,6 @@ let g:mkdp_refresh_slow = 0
 " set to 1, the MarkdownPreview command can be use for all files,
 " by default it can be use in markdown file
 " default: 0
-let g:mkdp_command_for_global = 0
-
-" set to 1, preview server available to others in your network
-" by default, the server listens on localhost (127.0.0.1)
-" default: 0
-let g:mkdp_open_to_the_world = 0
-
-" use custom IP to open preview page
 " useful when you work in remote vim and preview on local browser
 " more detail see: https://github.com/iamcco/markdown-preview.nvim/pull/9
 " default empty
@@ -141,8 +128,6 @@ let g:mkdp_browserfunc = ''
 " disable_filename: if disable filename header for preview page, default: 0
 let g:mkdp_preview_options = {
     \ 'mkit': {},
-    \ 'katex': {},
-    \ 'uml': {},
     \ 'maid': {},
     \ 'disable_sync_scroll': 0,
     \ 'sync_scroll_type': 'middle',
@@ -175,7 +160,7 @@ let g:mkdp_filetypes = ['markdown']
 "" Markdown Preview
 let g:mkdp_auto_start = 0
 let g:mkdp_refresh_slow = 0
-let g:mkdp_browser = 'Google Chrome'
+let g:mkdp_browser = 'Firefox'
 
 " ------------------------------------------------------------------------------
 " Goyo settings
@@ -206,27 +191,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " ------------------------------------------------------------------------------
 " VimWiki
 " ------------------------------------------------------------------------------
-
-" Suggested setting via vimwiki_markdown - https://github.com/patrickdavey/vimwiki_markdown#setup
-"let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/', 'template_path': '~/vimwiki/templates/',
-"          \ 'template_default': 'default', 'syntax': 'markdown', 'ext': '.md',
-"          \ 'path_html': '~/Dropbox/share-work/vimwiki/site_html/', 'custom_wiki2html': 'vimwiki_markdown',
-"          \ 'html_filename_parameterization': 1,
-"          \ 'template_ext': '.tpl'}]
-
-"let g:vimwiki_list = [{'path': '~/vimwiki/',
-"                      \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/'}]
-"let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-
-" Makes vimwiki markdown links as [text](text.md) instead of [text](text)
-"let g:vimwiki_markdown_link_ext = 1
-
-"let g:taskwiki_markup_syntax = 'markdown'
-"let g:markdown_folding = 1
-
-" changes to Discount markdown to HTML converter - http://www.pell.portland.or.us/~orc/Code/discount/
-" let g:vimwiki_customwiki2html=$HOME.'/.vim/autoload/vimwiki/customwiki2html.sh'
 
 "" flash yank highlight = great visual feedback
 augroup highlight_yank
@@ -234,7 +199,9 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
+" ------------------------------------------------------------------------------
 " Gruvbox Material theme
+" ------------------------------------------------------------------------------
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_disable_italic_comment = 0
@@ -268,21 +235,19 @@ let $FZF_DEFAULT_OPTS='--reverse'
 "" Airline theme
 let g:airline_theme = 'gruvbox_material'
 
+" ------------------------------------------------------------------------------
 " REMAPS
+" ------------------------------------------------------------------------------
+
 " Leader
 let mapleader = "\<Space>"
 
-" make return and shift+return open up new lines above and below respectively
-" without going into insert mode.
-"nmap <C-o> O<Esc>
-"nmap <CR> o<Esc>
-
-" ------------------
+" ------------------------------------
 " Coc config in ~/.config/nvim/plug-config/
-" ------------------
+" ------------------------------------
 " `gc` comments out a selection
 
-" " Coc-rename
+" Coc-rename
 nmap <leader>rr <Plug>(coc-rename)
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
@@ -292,7 +257,6 @@ map <leader>n :NERDTreeToggle<cr>
 " open FZF
 map <leader>f :FZF
 
-
 " using * to search or visual selection this enters the replace command and
 " puts your cursor in line to accept the term to replace
 nnoremap <leader>r :%s///g<left><left>
@@ -300,9 +264,6 @@ nnoremap <leader>rc :%s///gc<left><left>
 
 " source current file
 nnoremap <leader>so :source %<cr>
-
-" save current file
-" nnoremap <leader>w :w<cr>
 
 " remap normal copy/paste keys to vim registers
 vnoremap <C-c> "+y
