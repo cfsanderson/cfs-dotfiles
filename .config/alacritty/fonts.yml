@@ -7,11 +7,10 @@ font:
     family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: FiraCode Nerd Font
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     style: Italic
   bold_italic:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     style: Bold Italic
   size: 14.0
   offset:
