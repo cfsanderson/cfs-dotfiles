@@ -35,7 +35,9 @@ filetype plugin on
 
 highlight Comment cterm=italic
 
+" ------------------------------------------------------------------------------
 " NERDTREE
+" ------------------------------------------------------------------------------
 autocmd StdinReadPre * let s:std_in=1
 " Automatically close a tab if NerdTree is the last thing running
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -68,13 +70,13 @@ if has('termguicolors')
 endif
 
 " ------------------------------------------------------------------------------
-" Python
+" PYTHON
 " ------------------------------------------------------------------------------
-let g:python2_host_prog = '$HOME/.asdf/shims/python2'
+"let g:python2_host_prog = '$HOME/.asdf/shims/python2'
 let g:python3_host_prog = '$HOME/.asdf/shims/python3'
 
 " ------------------------------------------------------------------------------
-" MarkdownPreview
+" MARKDOWN PREVIEW
 " ------------------------------------------------------------------------------
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
@@ -193,12 +195,6 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " ------------------------------------------------------------------------------
 let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/'}]
 
-"" flash yank highlight = great visual feedback
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
-augroup END
-
 " ------------------------------------------------------------------------------
 " Gruvbox Material theme
 " ------------------------------------------------------------------------------
@@ -212,40 +208,50 @@ let g:gruvbox_material_sign_column_background = 'none'
 colorscheme gruvbox-material
 set background=dark
 
-" jsx syntax highlighting
-" dark red
+"" Airline theme
+let g:airline_theme = 'gruvbox_material'
+
+" ------------------------------------------------------------------------------
+" SYNTAX HIGHLIGHTING
+" ------------------------------------------------------------------------------
+" jsx syntax highlighting dark red
 hi tsxTagName guifg=#E06C75
 hi tsxComponentName guifg=#E06C75
 hi tsxCloseComponentName guifg=#E06C75
 
-" orange
+" jsx syntax highlighting orange
 hi tsxCloseString guifg=#F99575
 hi tsxCloseTag guifg=#F99575
 hi tsxCloseTagName guifg=#F99575
 hi tsxAttributeBraces guifg=#F99575
 hi tsxEqual guifg=#F99575
 
-" yellow
+" jsx syntax highlighting yellow
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+
+" ------------------------------------------------------------------------------
+" MISCELLANEOUS
+" ------------------------------------------------------------------------------
+
+" shut off Perl
+let g:loaded_perl_provider = 0
+
+"" flash yank highlight = great visual feedback
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
 
 "FZF settings
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 
-"" Airline theme
-let g:airline_theme = 'gruvbox_material'
-
 " ------------------------------------------------------------------------------
-" REMAPS
+" REMAPS & KEYBINDINGS
 " ------------------------------------------------------------------------------
 
 " Leader
 let mapleader = "\<Space>"
-
-" ------------------------------------
-" Coc config in ~/.config/nvim/plug-config/
-" ------------------------------------
-" `gc` comments out a selection
 
 " Coc-rename
 nmap <leader>rr <Plug>(coc-rename)
