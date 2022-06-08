@@ -44,7 +44,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'cfsanderson/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'branch': 'darkdown' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -60,7 +60,6 @@ Plug '~/.config/nvim/unmanaged-plugins/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug '~/.config/nvim/unmanaged-plugins/vim-css-color'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-Plug 'tools-life/taskwiki'
 
 call plug#end()
 
@@ -72,8 +71,8 @@ endif
 " ------------------------------------------------------------------------------
 " PYTHON
 " ------------------------------------------------------------------------------
-"let g:python2_host_prog = '$HOME/.asdf/shims/python2'
-let g:python3_host_prog = '$HOME/.asdf/shims/python3'
+"let g:python2_host_prog = '/Users/caleb/.asdf/shims/python2'
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
 " ------------------------------------------------------------------------------
 " MARKDOWN PREVIEW
@@ -91,19 +90,30 @@ let g:mkdp_auto_close = 1
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
 " move the cursor
 " default: 0
-let g:mkdp_refresh_slow = 0
+let g:mkdp_refresh_slow = 1
 
 " set to 1, the MarkdownPreview command can be use for all files,
 " by default it can be use in markdown file
 " default: 0
+let g:mkdp_command_for_global = 0
+
+" set to 1, preview server available to others in your network
+" by default, the server listens on localhost (127.0.0.1)
+" default: 0
+let g:mkdp_open_to_the_world = 0
+
+" use custom IP to open preview page
 " useful when you work in remote vim and preview on local browser
 " more detail see: https://github.com/iamcco/markdown-preview.nvim/pull/9
 " default empty
 let g:mkdp_open_ip = ''
 
 " specify browser to open preview page
+" for path with space
+" valid: `/path/with\ space/xxx`
+" invalid: `/path/with\\ space/xxx`
 " default: ''
-let g:mkdp_browser = ''
+let g:mkdp_browser = 'Brave Browser'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
@@ -130,6 +140,8 @@ let g:mkdp_browserfunc = ''
 " disable_filename: if disable filename header for preview page, default: 0
 let g:mkdp_preview_options = {
     \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
     \ 'maid': {},
     \ 'disable_sync_scroll': 0,
     \ 'sync_scroll_type': 'middle',
@@ -137,7 +149,8 @@ let g:mkdp_preview_options = {
     \ 'sequence_diagrams': {},
     \ 'flowchart_diagrams': {},
     \ 'content_editable': v:false,
-    \ 'disable_filename': 0
+    \ 'disable_filename': 0,
+    \ 'toc': {}
     \ }
 
 " use a custom markdown style must be absolute path
@@ -148,7 +161,7 @@ let g:mkdp_markdown_css = ''
 " like '/Users/username/highlight.css' or expand('~/highlight.css')
 let g:mkdp_highlight_css = ''
 
-" use a custom port to start server or random for empty
+" use a custom port to start server or empty for random
 let g:mkdp_port = ''
 
 " preview page title
@@ -159,10 +172,9 @@ let g:mkdp_page_title = '「${name}」'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 
-"" Markdown Preview
-let g:mkdp_auto_start = 0
-let g:mkdp_refresh_slow = 0
-let g:mkdp_browser = 'Firefox'
+" set default theme (dark or light)
+" By default the theme is define according to the preferences of the system
+let g:mkdp_theme = 'dark'
 
 " ------------------------------------------------------------------------------
 " Goyo settings
@@ -193,7 +205,14 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " ------------------------------------------------------------------------------
 " VimWiki
 " ------------------------------------------------------------------------------
-let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/'}]
+let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+" makes vimwiki links as [text](text.md) instead of [text](text)
+let g:vimwiki_markdown_link_ext = 1
+
+let g:taskwiki_markup_syntax = 'markdown'
+let g:markdown_folding = 1
 
 " ------------------------------------------------------------------------------
 " Gruvbox Material theme
