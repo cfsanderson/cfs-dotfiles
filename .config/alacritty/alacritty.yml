@@ -32,9 +32,11 @@ window.opacity: 1
 title: cfsanderson
 
 
-cursor:
-  style: Block
-  unfocused_hollow: true
+#cursor:
+#  style: Block
+#  unfocused_hollow: true
+#  blinking: Always
+#  blink_interval: 750
 
 key_bindings:
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }

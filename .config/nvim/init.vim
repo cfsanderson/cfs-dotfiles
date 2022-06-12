@@ -44,7 +44,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'cfsanderson/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'branch': 'darkdown' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -84,7 +84,7 @@ let g:mkdp_auto_start = 0
 " set to 1, the nvim will auto close current preview window when change
 " from markdown buffer to another buffer
 " default: 1
-let g:mkdp_auto_close = 1
+let g:mkdp_auto_close = 0
 
 " set to 1, the vim will refresh markdown when save the buffer or
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
@@ -113,7 +113,7 @@ let g:mkdp_open_ip = ''
 " valid: `/path/with\ space/xxx`
 " invalid: `/path/with\\ space/xxx`
 " default: ''
-let g:mkdp_browser = 'Brave Browser'
+let g:mkdp_browser = 'Firefox Developer Edition'
 
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
@@ -174,7 +174,7 @@ let g:mkdp_filetypes = ['markdown']
 
 " set default theme (dark or light)
 " By default the theme is define according to the preferences of the system
-let g:mkdp_theme = 'dark'
+"let g:mkdp_theme = 'dark'
 
 " ------------------------------------------------------------------------------
 " Goyo settings
@@ -187,7 +187,7 @@ function! s:goyo_enter()
   set noshowcmd
   set scrolloff=999
   set number relativenumber
-  execute "MarkdownPreview"
+  MarkdownPreviewToggle
 endfunction
 
 function! s:goyo_leave()
@@ -196,7 +196,7 @@ function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
-  execute "MarkdownPreviewStop"
+  MarkdownPreviewToggle
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -205,14 +205,17 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " ------------------------------------------------------------------------------
 " VimWiki
 " ------------------------------------------------------------------------------
-let g:vimwiki_list = [{'path': '~/Dropbox/share-work/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+" set vimwiki location, syntax type, file extension, and file naming convention
+let g:vimwiki_list = [{'path': '$HOME/Projects/.wiki/', 'syntax': 'markdown', 'ext': '.md', 'links_space_char': '_'}]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+let g:taskwiki_markup_syntax = 'markdown'
+let g:markdown_folding = 1
 
 " makes vimwiki links as [text](text.md) instead of [text](text)
 let g:vimwiki_markdown_link_ext = 1
 
-let g:taskwiki_markup_syntax = 'markdown'
-let g:markdown_folding = 1
+" auto add headers to new pages and diary entries
+let g:vimwiki_auto_header = 1
 
 " ------------------------------------------------------------------------------
 " Gruvbox Material theme
@@ -314,4 +317,4 @@ imap <F3> <C-R>=strftime("%H:%M:%S")<CR>
 map <C-H> <C-W><C-H>
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
-map <C-L> <C-W><C-L>
+map <C-L> <C-W><C-L.'>
