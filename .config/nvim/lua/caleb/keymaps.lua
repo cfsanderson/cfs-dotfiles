@@ -44,9 +44,6 @@ keymap("n", "<F2>", "i<C-R>=strftime('%a %d %b %Y')<CR><Esc>", opts)
 -- " use F3 to insert current time in HH:MM:SS format
 keymap("n", "<F3>", "i<C-R>=strftime('%H:%M:%S')<CR><Esc>", opts)
 
--- Open explorer
-keymap("n", "<leader>e", ":Lex 15<cr>", opts)
-
 -- Navigate buffers w/ shift l and h
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -91,6 +88,11 @@ keymap("i", "<F3>", "<C-R>=strftime('%H:%M:%S')<CR>", opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+-------------------------------------
+-- Nvimtree
+-------------------------------------
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -------------------------------------
 -- Terminal --
