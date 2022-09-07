@@ -21,7 +21,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- Autocommand that reloads neovim whenever you save the plugins.lua file - I didn't like it so shut it off ;)
+-- make sure to save AND source this file before running Packer
 -- vim.cmd [[
 --   augroup packer_user_config
 --     autocmd!
@@ -103,6 +104,16 @@ return packer.startup(function(use)
   --   cmd = "VimwikiIndex",
   --   -- setup = function() require "vimwiki" end
   -- } 
+  
+  -- Autopairs, integrates with both cmp and treesitter
+  use "windwp/nvim-autopairs" 
+
+  -- Comments
+  use "numToStr/Comment.nvim"                             -- basic comments with gcc and gc in Visual mode
+  use 'JoosepAlviste/nvim-ts-context-commentstring'       -- Treesitter context aware comments for JSX 
+
+  -- Gitsigns - git stuff
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
