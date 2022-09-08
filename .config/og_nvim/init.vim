@@ -33,7 +33,8 @@ filetype plugin on
 
 highlight Comment cterm=italic
 
-" ------------------------------------------------------------------------------ NERDTREE
+" ------------------------------------------------------------------------------ 
+"  NERDTREE
 " ------------------------------------------------------------------------------
 autocmd StdinReadPre * let s:std_in=1
 " Automatically close a tab if NerdTree is the last thing running
