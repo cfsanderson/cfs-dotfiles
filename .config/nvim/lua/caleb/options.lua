@@ -50,7 +50,7 @@ local options = {
 }
 
 -- not sure I need/want this... `:help shortmess'
--- vim.opt.shortmess:append "c"
+vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
