@@ -9,7 +9,7 @@ local cmd = vim.cmd
 local options = {
   autoindent = true,
   background = "dark",
-  backup = false,                           -- creates a backup file
+  backup = true,                            -- creates a backup fillet
   belloff = "all",
   clipboard = "unnamedplus",                -- allows neovim to access the system clipboard
   cmdheight = 2,                            -- more space in the neovim command line for displaying messages
@@ -38,16 +38,15 @@ local options = {
   softtabstop = 2,                          -- If negative, the shiftwidth value is used
   splitbelow = true,                        -- force all horizontal splits to go below current window
   splitright = true,                        -- force all vertical splits to go to the right of current window
-  swapfile = false,                         -- creates a swapfile
+  swapfile = true,                         -- creates a swapfile
   syntax = "ON",                            -- for VimWiki
   tabstop = 2,                              -- insert 2 spaces for a tab
   termguicolors = true,                     -- set term gui colors (most terminals support this)
   timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                          -- enable persistent undo
-  undodir = '~/.vim/undodir',               -- undodir
   updatetime = 300,                         -- faster completion (4000ms default)
   wrap = false,                             -- display lines as one long line
-  writebackup = false,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  writebackup = true,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 }
 
 -- not sure I need/want this... `:help shortmess'
@@ -57,12 +56,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
--- these are specific to VimWiki - not sure if these need to be A or cmd...
--- A.nvim_command('syntax on') -- tried putting this in options
--- A.nvim_command('filetype plugin on')
--- A.nvim_command('display+=lastline') -- When included, as much as possible of the last line in a window will be displayed. "@@@" is put in the last columns of the last screen line to indicate the rest of the line is not displayed.
--- A.nvim_command('highlight Comment cterm=italic')
-
+cmd 'set backupdir=~/.vim/backupdir//,.'
+cmd 'set undodir=~/.vim/undodir//,.'
 cmd 'syntax on'
 cmd 'filetype plugin on'
 cmd 'display+=lastline' -- When included, as much as possible of the last line in a window will be displayed. "@@@" is put in the last columns of the last screen line to indicate the rest of the line is not displayed.
