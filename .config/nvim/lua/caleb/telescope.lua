@@ -12,12 +12,40 @@ end
 
 local actions = require "telescope.actions"
 
+local dropdown_theme = require('telescope.themes').get_dropdown({
+  results_height = 20;
+  winblend = 15;
+  width = 0.8;
+  prompt_title = '';
+  prompt_prefix = " ",
+  selection_caret = " ",
+  path_display = { "smart" },
+  previewer = false;
+  borderchars = {
+    prompt = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    results = {' ', '▐', '▄', '▌', '▌', '▐', '▟', '▙' };
+    preview = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+  };
+})
+
 telescope.setup {
   defaults = {
 
-    prompt_prefix = " ",
-    selection_caret = " ",
-    path_display = { "smart" },
+    -- prompt_prefix = " ",
+    -- selection_caret = " ",
+    -- path_display = { "smart" },
+    -- border = false,
+    -- winblend = 7,
+    -- width = 0.8,
+    -- show_line = false,
+    -- prompt_title = '',
+    -- results_title = '',
+    -- preview_title = '',
+    -- borderchars = {
+    --   prompt = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    --   results = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    --   preview = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    -- };
 
     mappings = {
       i = {
