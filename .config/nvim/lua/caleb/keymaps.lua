@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 local loud = { silent = false }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true } -- not used rn
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -115,7 +115,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- puts your cursor in line to accept the term to replace
 -- nnoremap <leader>r :%s///g<left><left>
 -- nnoremap <leader>rc :%s///gc<left><left>
- 
+
 -- " vim-fugitive - git workflow
 -- nmap <leader>gs :G<CR>
 -- nmap <leader>gj :diffget //3<CR>

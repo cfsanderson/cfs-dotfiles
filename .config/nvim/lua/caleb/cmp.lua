@@ -60,7 +60,7 @@ cmp.setup {
       -- documentation = cmp.config.window.bordered(),
   },
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item(), -- ctrl-k up through menu
+    ["<C-p>"] = cmp.mapping.select_prev_item(), -- ctrl-k up through menu
 		["<C-j>"] = cmp.mapping.select_next_item(), -- ctrl-j down through menu
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),

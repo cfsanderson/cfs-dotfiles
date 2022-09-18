@@ -49,12 +49,11 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  
   use "wbthomason/packer.nvim"         -- Have packer manage itself
   use "nvim-lua/popup.nvim"            -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"          -- Useful lua functions used ny lots of plugins
 	use 'lewis6991/impatient.nvim'       -- impatient for speedier loading of modules
-  
+
   -- stuff from old config - may not need anymore???
   use 'tpope/vim-commentary'
   use 'tpope/vim-fugitive'
@@ -63,7 +62,7 @@ return packer.startup(function(use)
 
   -- my colorscheme
   use { 'cfsanderson/gruvbox-material', branch = 'dev-cfs' }
-  
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp"               -- The completion plugin
   use "hrsh7th/cmp-buffer"             -- buffer completions
@@ -104,9 +103,8 @@ return packer.startup(function(use)
   --   cmd = "VimwikiIndex",
   --   -- setup = function() require "vimwiki" end
   -- } 
-  
   -- Autopairs, integrates with both cmp and treesitter
-  use "windwp/nvim-autopairs" 
+  use "windwp/nvim-autopairs"
 
   -- Comments
   use "numToStr/Comment.nvim"                             -- basic comments with gcc and gc in Visual mode
