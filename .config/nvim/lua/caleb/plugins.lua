@@ -21,14 +21,14 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file - I didn't like it so shut it off ;)
+-- Autocommand that reloads neovim whenever you save the plugins.lua file - I didn't like it so shut it off ;) 
 -- make sure to save AND source this file before running Packer
--- vim.cmd [[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerSync
---   augroup end
--- ]]
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"         -- Have packer manage itself
   use "nvim-lua/popup.nvim"            -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"          -- Useful lua functions used ny lots of plugins
-	use 'lewis6991/impatient.nvim'       -- impatient for speedier loading of modules
+	use 'lewis6991/impatient.nvim'       -- impatient for speedier loading of modules 
 
   -- stuff from old config - may not need anymore???
   use 'tpope/vim-commentary'
