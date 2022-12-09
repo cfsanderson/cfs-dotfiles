@@ -43,7 +43,7 @@ local options = {
   tabstop = 2,                              -- insert 2 spaces for a tab
   termguicolors = true,                     -- set term gui colors (most terminals support this)
   timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true,                          -- enable persistent undo
+  undofile = true,                         -- enable persistent undo
   updatetime = 300,                         -- faster completion (4000ms default)
   wrap = false,                             -- display lines as one long line
   writebackup = true,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -56,8 +56,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-cmd 'set backupdir=~/.vim/backupdir//,.'
-cmd 'set undodir=~/.vim/undodir//,.'
+cmd 'set backupdir=$HOME/.vim/backupdir//,.'
+cmd 'set undodir=$HOME/.vim/undodir//,.'
 cmd 'syntax on'
 cmd 'filetype plugin on'
 cmd 'display+=lastline' -- When included, as much as possible of the last line in a window will be displayed. "@@@" is put in the last columns of the last screen line to indicate the rest of the line is not displayed.

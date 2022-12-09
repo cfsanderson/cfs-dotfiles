@@ -7,6 +7,7 @@
 "                                                  
 "===============================================================================
 "                               @cfsanderson
+"                               making a note
 
 syntax on
 
@@ -25,7 +26,7 @@ set smartcase
 set splitbelow
 set splitright
 set tabstop=2 softtabstop=2 expandtab
-set undodir=~/.vim/undodir
+"set undodir=~/.vim/undodir
 
 " for VimWiki
 set nocompatible
