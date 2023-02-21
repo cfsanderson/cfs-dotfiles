@@ -14,9 +14,9 @@ import:
 
 # Window Customizations
 window:
-  dimensions:
-    columns: 118
-    lines: 30
+  #dimensions:
+  #  columns: 118
+  #  lines: 30
   position:
     x: 0
     y: 0

@@ -30,6 +30,7 @@ require "caleb.nvim-tree"
 -- require "caleb.alpha"
 -- require "caleb.whichkey"
 -- require "caleb.autocommands"
+-- require "caleb.somethingintheway"
 require "caleb.vimwiki"
 --
 --===========================================================
