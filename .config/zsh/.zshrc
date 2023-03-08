@@ -56,7 +56,8 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Neofetch ascii art
-neofetch --ascii $HOME/.config/neofetch/millenium-falcon.txt
+# neofetch --ascii $HOME/.config/neofetch/millenium-falcon.txt
+fastfetch
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
