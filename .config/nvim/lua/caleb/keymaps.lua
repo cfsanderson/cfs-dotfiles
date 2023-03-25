@@ -11,7 +11,7 @@ local loud = { silent = false }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -62,12 +62,12 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- keeps the same thing in yank until you yank again
-keymap("v", "p", '"_dP', opts) 
+keymap("v", "p", '"_dP', opts)
 
 -------------------------------------
 -- Visual Block --
 -------------------------------------
--- Move text up and down
+-- Move text up and down - visual mode select whole line and use `shift J/K` to move up or down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
@@ -85,9 +85,9 @@ keymap("i", "<F3>", "<C-R>=strftime('%H:%M:%S')<CR>", opts)
 -------------------------------------
 -- Telescope --
 -------------------------------------
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>t", "<cmd>Telescope<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -------------------------------------

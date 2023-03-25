@@ -51,8 +51,8 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"         -- Have packer manage itself
   use "nvim-lua/popup.nvim"            -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim"          -- Useful lua functions used ny lots of plugins
-	use 'lewis6991/impatient.nvim'       -- impatient for speedier loading of modules 
+  use "nvim-lua/plenary.nvim"          -- Useful lua functions used by lots of plugins
+	use 'lewis6991/impatient.nvim'       -- impatient for speedier loading of modules
 
   -- stuff from old config - may not need anymore???
   use 'tpope/vim-commentary'

@@ -49,8 +49,8 @@ local options = {
   writebackup = true,                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 }
 
--- not sure I need/want this... `:help shortmess'
-vim.opt.shortmess:append "c"
+-- :help shortmess - basically shows shortened messages... not sure I want need it.
+-- vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
