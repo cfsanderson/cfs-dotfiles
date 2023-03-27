@@ -1,8 +1,10 @@
 # Colors (ported from iTerm2 - sort of Material Gruvbox)
 colors:
   primary:
-    background: "#0b0d0f"
-    foreground: "#e1d7c7"
+    background: "#121212"
+    foreground: "#DCC6A3"
+    # background: "#0B0D0F"
+    # foreground: "#e1d7c7"
 
   # Normal colors
   normal:
@@ -30,3 +32,4 @@ colors:
     text: "0xffffff"
     background: "0x0b0d0f"
     white: "0xffffff"
+
