@@ -32,8 +32,7 @@ require "caleb.nvim-tree"
 -- require "caleb.autocommands"
 -- require "caleb.somethingintheway"
 require "caleb.vimwiki"
---
---===========================================================
+
 -- Notes on my neovim configuration:
 --
 -- I recently revamped my vim configuration to be based on Lua based on [this tutorial]()

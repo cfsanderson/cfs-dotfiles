@@ -67,7 +67,7 @@ cmd [[set iskeyword+=-]]
 cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- Airline theme
--- g.airline_theme = 'gruvbox_material'
+g.airline_theme = 'gruvbox_material'
 
 -- Gruvbox-material settings
 g.gruvbox_material_background = 'hard'
@@ -76,3 +76,5 @@ g.gruvbox_material_disable_italic_comment = 0
 g.gruvbox_material_menu_selection_background = 'green'
 g.gruvbox_material_palette = 'material'
 g.gruvbox_material_sign_column_background = 'none'
+-- g.gruvbox_material_colors_override = {'fg0': ['#E1D7C7', '223']}
+g.gruvbox_material_better_performance = 1

@@ -47,7 +47,9 @@ packer.init {
   },
 }
 
+---------------------------------------------------------------------------------
 -- Install your plugins here
+---------------------------------------------------------------------------------
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"         -- Have packer manage itself
   use "nvim-lua/popup.nvim"            -- An implementation of the Popup API from vim in Neovim
@@ -61,7 +63,8 @@ return packer.startup(function(use)
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
 
   -- my colorscheme
-  use { 'cfsanderson/gruvbox-material', branch = 'dev-cfs' }
+  -- use { 'cfsanderson/gruvbox-material', branch = 'dev-cfs' }
+  use 'sainnhe/gruvbox-material'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"               -- The completion plugin
@@ -114,8 +117,14 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Nvim-tree 
-  use 'kyazdani42/nvim-tree.lua'
+  -- use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+
+  -- Lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -123,35 +132,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
---     telescope-fzf-native???
---     use {
---         'nvim-telescope/telescope-fzf-native.nvim', 
---         run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' 
---     }
---
---     --------------------------------------------------
---     -- niceties                                     --
---     --------------------------------------------------
--- 
---     use 'junegunn/goyo.vim'
---     use 'vim-airline/vim-airline'
---     use {
---         'norcalli/nvim-colorizer.lua',
---         ft = { 'css', 'javascript', 'vim', 'html' },
---         config = [[require('colorizer').setup {'css', 'javascript', 'vim', 'html'}]],
---     }
--- 
---     --------------------------------------------------
---     -- vimwiki                                      --
---     --------------------------------------------------
--- 
---     use {
---         'vimwiki/vimwiki', 
---         branch = 'dev'
---     }
--- 
---     --------------------------------------------------
---     -- stuff I need to replace                      --
---     --------------------------------------------------
---     -- use 'preservim/nerdtree'
---     -- use 'tiagofumo/vim-nerdtree-syntax-highlight'

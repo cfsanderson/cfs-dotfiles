@@ -14,6 +14,7 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
+-- makes SuperTab work correctly
 local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
@@ -60,11 +61,11 @@ cmp.setup {
       -- documentation = cmp.config.window.bordered(),
   },
   mapping = {
-    ["<C-p>"] = cmp.mapping.select_prev_item(), -- ctrl-k up through menu
+    ["<C-k>"] = cmp.mapping.select_prev_item(), -- ctrl-k up through menu
 		["<C-j>"] = cmp.mapping.select_next_item(), -- ctrl-j down through menu
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }), -- scroll up through inner windows
+    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }), -- scroll down through inner windows
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }), -- opens up ALL completions available without beginning to type
     ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ["<C-e>"] = cmp.mapping { -- cancel/close/abort menu
       i = cmp.mapping.abort(),
@@ -109,7 +110,6 @@ cmp.setup {
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         -- order matters
         nvim_lsp = "[LSP]",
@@ -132,6 +132,11 @@ cmp.setup {
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
+  },
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    }
   },
   experimental = {
     ghost_text = true,
