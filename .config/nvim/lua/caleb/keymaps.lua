@@ -91,9 +91,9 @@ keymap("n", "<leader>t", "<cmd>Telescope<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -------------------------------------
--- Nvimtree
+-- Neotree
 -------------------------------------
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", "<cmd>Neotree toggle<cr>", opts)
 
 -------------------------------------
 -- Terminal --

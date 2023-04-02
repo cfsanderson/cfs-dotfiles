@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview' }
 
   -- my colorscheme
-  -- use { 'cfsanderson/gruvbox-material', branch = 'dev-cfs' }
+  -- use { 'cfsanderson/cfs-gruvbox-material', branch = 'dev-cfs' }
   use 'sainnhe/gruvbox-material'
 
   -- cmp plugins
@@ -95,6 +95,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
+ 
   -- TS playground helps to understand how TS is defining things. Maybe install later if necessary.
   -- use "nvim-treesitter/playground"
 
@@ -106,6 +107,7 @@ return packer.startup(function(use)
   --   cmd = "VimwikiIndex",
   --   -- setup = function() require "vimwiki" end
   -- } 
+
   -- Autopairs, integrates with both cmp and treesitter
   use "windwp/nvim-autopairs"
 
@@ -119,8 +121,25 @@ return packer.startup(function(use)
   -- Nvim-tree 
   -- use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+  
+  -- Neo-tree
+  -- :let g:loaded_netrw       = 1
+  -- :let g:loaded_netrwPlugin = 1
+  -- Unless you are still migrating, remove the deprecated commands from v1.x
+  -- vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+-- Unless you are still migrating, remove the deprecated commands from v1.x
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
-  -- Lualine
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }

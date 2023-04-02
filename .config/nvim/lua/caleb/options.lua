@@ -76,5 +76,6 @@ g.gruvbox_material_disable_italic_comment = 0
 g.gruvbox_material_menu_selection_background = 'green'
 g.gruvbox_material_palette = 'material'
 g.gruvbox_material_sign_column_background = 'none'
--- g.gruvbox_material_colors_override = {'fg0': ['#E1D7C7', '223']}
 g.gruvbox_material_better_performance = 1
+-- TODO find a way to change the foreground color
+-- g.gruvbox_material_colors_override = {'fg0': ['#E1D7C7', '223']}
