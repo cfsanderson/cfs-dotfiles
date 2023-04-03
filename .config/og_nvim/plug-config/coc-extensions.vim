@@ -1,1 +1,0 @@
-let g:coc_global_extensions = ['coc-snippets', 'coc-scssmodules', 'coc-prettier', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json', 'coc-marketplace', 'coc-markdownlint', 'coc-html']
