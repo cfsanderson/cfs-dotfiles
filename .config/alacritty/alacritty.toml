@@ -3,25 +3,25 @@ import = [
 "~/.config/alacritty/fonts.toml",
 ]
 
-title = "cfsanderson"
-
-shell = { program = "/bin/zsh/", args = "- --login" }
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
 
 [window]
 position = { x = 0, y = 0 }
-padding = { x = 25, y = 25 }
+padding = { x = 12, y = 12}
 decorations = "Buttonless"
 startup_mode = "Maximized"
 opacity = 1
+title = "cfsanderson"
 
 [scrolling]
 history = 10000
 multiplier = 3
 
 [cursor]
-style = "Block"
+style = { shape = "Block", blinking = "Always" }
 unfocused_hollow = true
-blinking = "Always"
 blink_interval = 750
 
 [keyboard]
