@@ -1,0 +1,38 @@
+import = [
+"~/.config/alacritty/colors.toml",
+"~/.config/alacritty/fonts.toml",
+]
+
+title = "cfsanderson"
+
+shell = { program = "/bin/zsh/", args = "- --login" }
+
+[window]
+position = { x = 0, y = 0 }
+padding = { x = 25, y = 25 }
+decorations = "Buttonless"
+startup_mode = "Maximized"
+opacity = 1
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+blinking = "Always"
+blink_interval = 750
+
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+    { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
+    { key = "PageDown", mods = "Shift", action = "ScrollPageDown" },
+    { key = "End", mods = "Shift", action = "ScrollToBottom" },
+    { key = "Home", mods = "Shift", action = "ScrollToTop" },
+]
+
+[debug]
+persistent_logging = false
+
