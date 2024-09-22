@@ -1,0 +1,16 @@
+themes {
+    gruvbox {
+        fg "#DCC6A3"
+        bg "#121212"
+        black "#3c3836"
+        red "#b85651"
+        green "#8f9a52"
+        yellow "#c18f41"
+        blue "#68948a"
+        magenta "#ab6c7d"
+        cyan "#72966c"
+        white "#ada291"
+        orange "#d65d0e"
+    }
+} 
+
