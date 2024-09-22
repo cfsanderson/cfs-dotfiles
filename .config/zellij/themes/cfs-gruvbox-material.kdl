@@ -1,5 +1,5 @@
 themes {
-    gruvbox {
+    cfs-gruvbox-material {
         fg "#DCC6A3"
         bg "#121212"
         black "#3c3836"
@@ -12,5 +12,4 @@ themes {
         white "#ada291"
         orange "#d65d0e"
     }
-} 
-
+}
