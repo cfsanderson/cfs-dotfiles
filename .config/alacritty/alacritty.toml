@@ -1,9 +1,5 @@
-import = [
-"~/.config/alacritty/colors.toml",
-"~/.config/alacritty/fonts.toml",
-]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l"]
 
@@ -35,4 +31,12 @@ bindings = [
 
 [debug]
 persistent_logging = false
+
+[general]
+import = [
+"~/.config/alacritty/colors.toml",
+"~/.config/alacritty/fonts.toml",
+]
+
+[terminal]
 
