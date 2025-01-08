@@ -5,14 +5,15 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Unless Alacritty... change caps_lock to left_control if held, change caps_lock to escape if pressed alone.",
+                        "description": "Unless Alacritty or Kitty... change caps_lock to left_control if held, change caps_lock to escape if pressed alone.",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -28,14 +29,15 @@
                         ]
                     },
                     {
-                        "description": "If Alacritty... change caps_lock to ESC",
+                        "description": "If Alacritty or Kitty... change caps_lock to ESC",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -57,7 +59,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -77,7 +80,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -97,7 +101,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -117,7 +122,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
-                                            "^org.alacritty"
+                                            "^org.alacritty",
+                                            "^org.kitty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
