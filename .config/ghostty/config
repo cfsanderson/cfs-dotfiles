@@ -1,0 +1,39 @@
+font-family = "FiraCode Nerd Font"
+font-size = 14
+background-blur-radius = 20
+mouse-hide-while-typing = true
+window-decoration = true
+# keybind = global:cmd+/=toggle_quick_terminal
+macos-option-as-alt = true
+background-opacity = 1
+background-blur-radius = 20 
+
+# Map the colors from Kitty to Ghostty's palette
+palette = 0=#3C3836
+palette = 1=#B85651
+palette = 2=#8F9A52
+palette = 3=#C18F41
+palette = 4=#68948A
+palette = 5=#AB6C7D
+palette = 6=#72966C
+palette = 7=#ADA291
+palette = 8=#5A524C
+palette = 9=#B85651
+palette = 10=#A9B665
+palette = 11=#D8A657
+palette = 12=#7DAEA3
+palette = 13=#D3869B
+palette = 14=#89B482
+palette = 15=#DCC6A3
+
+# Set the background and foreground colors
+background = #121212
+foreground = #DCC6A3
+
+# Set the cursor colors
+cursor-color = #ADA291
+cursor-text = #121212
+
+# Set the selection colors
+selection-background = #DCC6A3
+selection-foreground = #121212
