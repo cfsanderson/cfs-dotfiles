@@ -4,10 +4,13 @@ background-blur-radius = 20
 mouse-hide-while-typing = true
 macos-option-as-alt = true
 macos-titlebar-style = hidden
-background-opacity = 0.95
+background-opacity = 0.98
 background-blur-radius = 20 
 window-padding-x = 20
 window-padding-y = 20
+
+keybind = alt+kp_left=unbind
+keybind = alt+kp_left=unbind
 
 # my custom theme
 # https://github.com/cfsanderson/cfs-gruvbox-material
