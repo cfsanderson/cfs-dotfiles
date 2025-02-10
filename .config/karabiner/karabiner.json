@@ -5,7 +5,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Unless Alacritty or Kitty... change caps_lock to left_control if held, change caps_lock to escape if pressed alone.",
+                        "description": "Unless terminal... change caps_lock to left_control if held, change caps_lock to escape if pressed alone.",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -13,7 +13,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -29,7 +30,7 @@
                         ]
                     },
                     {
-                        "description": "If Alacritty or Kitty... change caps_lock to ESC",
+                        "description": "If terminal... change caps_lock to ESC",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -37,7 +38,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -60,7 +62,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -81,7 +84,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -102,7 +106,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -123,7 +128,8 @@
                                         "bundle_identifiers": [
                                             "^org\\.vim\\.",
                                             "^org.alacritty",
-                                            "^org.kitty"
+                                            "^net\\.kovidgoyal\\.kitty",
+                                            "^com\\.mitchellh\\.ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }

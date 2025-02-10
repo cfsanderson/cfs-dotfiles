@@ -37,6 +37,7 @@ foreground = #DCC6A3
 
 cursor-color = #ADA291
 cursor-text = #121212
+cursor-style = block
 
 selection-background = #DCC6A3
 selection-foreground = #121212
