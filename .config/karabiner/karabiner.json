@@ -286,6 +286,24 @@
                         "product_id": 834,
                         "vendor_id": 1452
                     }
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 480,
+                        "vendor_id": 13364
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 480,
+                        "vendor_id": 13364
+                    },
+                    "manipulate_caps_lock_led": false
                 }
             ],
             "fn_function_keys": [
