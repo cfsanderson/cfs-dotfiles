@@ -34,7 +34,7 @@ brew "pngpaste"
 brew "ripgrep"
 brew "spaceinvaders-go"
 brew "tcl-tk"
-brew "tldr"
+brew "tlrc"
 brew "tmux"
 brew "tmux-mem-cpu-load"
 brew "trash-cli", link: true
