@@ -11,6 +11,7 @@ window-padding-y = 20
 quit-after-last-window-closed=true
 confirm-close-surface=false
 
+keybind = Backspace=SendChars("\x7f")
 keybind = alt+kp_left=unbind
 keybind = alt+kp_left=unbind
 
