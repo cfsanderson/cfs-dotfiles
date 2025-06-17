@@ -66,7 +66,6 @@ fastfetch
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # . $HOME/.asdf/asdf.sh
 
 export PATH="/opt/homebrew/bin:$PATH"
