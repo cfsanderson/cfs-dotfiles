@@ -1,6 +1,0 @@
-theme "cfs-gruvbox-material"
-default_layout "compact"
-on_force_close "quit"
-session {
-    default_shell "zsh"
-}
