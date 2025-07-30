@@ -8,13 +8,12 @@
 #===============================================================================
 #                               @cfsanderson
 
-# Autostart Zellij on Alacritty startup
-# eval "$(zellij setup --generate-auto-start zsh)"
-
 # Aliases moved to ~/.oh-my-zsh/custom/aliases.zsh and accessible with "confalias" alias.
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 export ZSH=$HOME/.oh-my-zsh
 export TMUX_CONF=~/.config/tmux/tmux.conf
+
+source ~/.config/zsh/.env.local
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -29,8 +28,6 @@ autoload -U edit-command-line
 # Vi style:
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
-
-# source $HOME/.tokens/.github-homebrew-token
 
 ZSH_THEME="agnoster"
 
