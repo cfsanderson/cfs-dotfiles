@@ -1,8 +1,0 @@
-# Colors (ported from iTerm2 - sort of Material Gruvbox)
-[colors]
-primary = { background = "#121212", foreground = "#DCC9AC" }
-normal = { black = "#3c3836", red = "#b85651", green = "#8f9a52", yellow = "#c18f41", blue = "#68948a", magenta = "#ab6c7d", cyan = "#72966c", white = "#ada291" }
-bright = { black = "#5a524c", red = "#b85651", green = "#a9b665", yellow = "#d8a657", blue = "#7daea3", magenta = "#d3869b", cyan = "#89b482", white = "#dcc6a3" }
-selection = { text = "0xffffff", background = "0x0b0d0f" }
-footer_bar = { foreground = "#1d1f21", background = "#c5c8c6" }
-draw_bold_text_with_bright_colors = true
