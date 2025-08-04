@@ -1,0 +1,145 @@
+/*
+ * CFS Gruvbox Material Color Palette
+ * Based on cfsanderson/cfs-gruvbox-material Neovim theme
+ * Configuration: Material foreground + Hard background
+ * 
+ * This is the master color palette file for all dotfiles configurations.
+ * Import this file in your CSS configs to maintain consistent theming.
+ * 
+ * Usage Examples:
+ *   @import "/home/caleb/Projects/arch-dotfiles/colors/gruvbox-material-palette.css";
+ *   background-color: var(--bg0);
+ *   color: var(--fg0);
+ */
+
+:root {
+  /* ==========================================
+   * BACKGROUND COLORS
+   * ========================================== */
+  
+  /* Primary backgrounds - core window/panel colors */
+  --bg-dim: #141617;        /* Darkest background - unused areas, deep shadows */
+  --bg0: #1a1919;           /* Main background - primary window background (from Normal) */
+  --bg1: #282828;           /* Secondary background - panels, status bars (from StatusLine) */
+  --bg2: #282828;           /* Tertiary background - same as bg1 in this variant */
+  --bg3: #3c3836;           /* UI element background - buttons, input fields (from Visual) */
+  --bg4: #3c3836;           /* Interactive element background - same as bg3 */
+  --bg5: #504945;           /* Highlighted background - hover states, selections (from TabLine) */
+  
+  /* Background status colors - colored backgrounds for alerts/status */
+  --bg-red: #ea6962;        /* Error/danger background */
+  --bg-green: #a9b665;      /* Success/safe background */
+  --bg-yellow: #d8a657;     /* Warning/caution background */
+
+  /* ==========================================
+   * FOREGROUND COLORS
+   * ========================================== */
+  
+  /* Primary text colors */
+  --fg0: #e5dac7;           /* Primary foreground - main text, bright emphasis (from Normal) */
+  --fg1: #ddc7a1;           /* Secondary foreground - subtext, less emphasis (from StatusLine) */
+  
+  /* ==========================================
+   * SEMANTIC COLORS
+   * ========================================== */
+  
+  /* Standard color palette - syntax highlighting, status indicators */
+  --red: #ea6962;           /* Errors, deletion, urgent states */
+  --orange: #e78a4e;        /* Warnings, modified states, orange accents */
+  --yellow: #d8a657;        /* Warnings, pending states, highlights */
+  --green: #a9b665;         /* Success, addition, safe states */
+  --aqua: #89b482;          /* Info, cyan accents, special highlights */
+  --blue: #7daea3;          /* Links, info states, blue accents */
+  --purple: #d3869b;        /* Special elements, purple accents */
+
+  /* ==========================================
+   * GREY SCALE
+   * ========================================== */
+  
+  /* Grey variants for subtle elements */
+  --grey0: #504945;         /* Dark grey - disabled text, subtle borders (from LineNr) */
+  --grey1: #928374;         /* Medium grey - secondary text, muted elements (from Comment) */
+  --grey2: #928374;         /* Light grey - active borders, emphasized subtle elements (from CursorLineNr) */
+  
+  /* Additional background greys */
+  --dark0-hard: #1a1919;    /* Alias for bg0 - hardest background */
+  --dark1: #3c3836;         /* Alias for bg3 - UI elements */
+  --dark2: #504945;         /* Alias for bg5 - hover/selection */
+  --dark3: #665c54;         /* Border color - subtle separators */
+  --dark4: #7c6f64;         /* Border color - more prominent separators */
+
+  /* ==========================================
+   * WORKSPACE/UI SPECIFIC COLORS
+   * ========================================== */
+  
+  /* Workspace/window management colors */
+  --workspace-inactive: var(--grey0);      /* Inactive workspace indicators */
+  --workspace-active: var(--fg0);          /* Active workspace indicators */
+  --workspace-urgent: var(--red);          /* Urgent workspace indicators */
+  --workspace-hover: var(--grey2);         /* Hover state for workspace elements */
+  
+  /* Border and separator colors */
+  --border-subtle: var(--dark3);           /* Subtle borders between elements */
+  --border-emphasis: var(--grey2);         /* Emphasized borders, active window borders */
+  --border-urgent: var(--red);             /* Urgent/error borders */
+  
+  /* Selection and highlight colors */
+  --selection-bg: var(--bg3);              /* Text/item selection background */
+  --selection-fg: var(--fg0);              /* Text/item selection foreground */
+  --highlight-bg: var(--bg5);              /* General highlight background */
+  --highlight-fg: var(--fg0);              /* General highlight foreground */
+  
+  /* Notification and alert colors */
+  --notification-bg: var(--bg1);           /* Notification background */
+  --notification-fg: var(--fg1);           /* Notification text */
+  --notification-border: var(--grey1);     /* Notification border */
+  
+  /* ==========================================
+   * ACCESSIBILITY & CONTRAST
+   * ========================================== */
+  
+  /* High contrast pairs for accessibility */
+  --text-primary: var(--fg0);              /* Primary readable text */
+  --text-secondary: var(--fg1);            /* Secondary readable text */
+  --text-muted: var(--grey1);              /* Muted/disabled text */
+  --text-on-dark: var(--fg0);              /* Text on dark backgrounds */
+  --text-on-colored: #1d2021;              /* Text on colored backgrounds */
+  
+  /* Background contrast levels */
+  --surface-lowest: var(--bg0);            /* Lowest elevation surface */
+  --surface-low: var(--bg1);               /* Low elevation surface */
+  --surface-medium: var(--bg3);            /* Medium elevation surface */
+  --surface-high: var(--bg5);              /* High elevation surface */
+}
+
+/*
+ * ==========================================
+ * USAGE GUIDELINES
+ * ==========================================
+ * 
+ * BACKGROUNDS:
+ * - Use --bg0 for main window/panel backgrounds
+ * - Use --bg1 for secondary panels or cards
+ * - Use --bg3 for interactive elements (buttons, inputs)
+ * - Use --bg5 for hover states and selections
+ * 
+ * FOREGROUNDS:
+ * - Use --fg0 for primary text and important content
+ * - Use --fg1 for secondary text and less critical content
+ * - Use --grey1 for muted text and disabled states
+ * 
+ * SEMANTIC COLORS:
+ * - Use semantic colors (--red, --green, etc.) for status indication
+ * - Combine with appropriate background colors for accessibility
+ * 
+ * BORDERS:
+ * - Use --border-subtle for gentle separations
+ * - Use --border-emphasis for active/focused elements
+ * - Use --grey2 for window borders and major separations
+ * 
+ * ACCESSIBILITY:
+ * - Always test color combinations for sufficient contrast
+ * - Primary text (--fg0) on primary background (--bg0) = high contrast
+ * - Secondary text (--fg1) on primary background (--bg0) = medium contrast
+ * - Muted text (--grey1) on primary background (--bg0) = low contrast
+ */

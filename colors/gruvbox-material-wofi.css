@@ -1,0 +1,47 @@
+/* Wofi-specific color definitions using GTK @define-color syntax
+ * Maps the master gruvbox-material palette to wofi's expected color names
+ * Import this file in wofi CSS to use standardized theme colors
+ */
+
+/* Core theme colors from master palette */
+@define-color base       #1a1919;  /* --bg0: main background */
+@define-color text       #e5dac7;  /* --fg0: primary text */
+@define-color selected-text #e5dac7;  /* --fg0: highlighted text */
+@define-color border     #928374;  /* --grey2: borders and emphasis */
+
+/* Extended colors (available for advanced wofi theming) */
+@define-color bg-secondary #282828;  /* --bg1: secondary backgrounds */
+@define-color bg-interactive #3c3836;  /* --bg3: interactive elements */
+@define-color bg-hover    #141617;  /* --bg5: hover states */
+
+@define-color text-secondary #ddc7a1;  /* --fg1: secondary text */
+@define-color text-muted  #928374;  /* --grey1: muted text */
+
+@define-color accent-red    #ea6962;  /* --red: error/urgent states */
+@define-color accent-green  #a9b665;  /* --green: success states */
+@define-color accent-yellow #d8a657;  /* --yellow: warning states */
+@define-color accent-blue   #7daea3;  /* --blue: info states */
+@define-color accent-purple #d3869b;  /* --purple: special states */
+@define-color accent-orange #e78a4e;  /* --orange: modified states */
+@define-color accent-aqua   #89b482;  /* --aqua: accent highlights */
+
+/* Border variations */
+@define-color border-subtle #3c3836;  /* --bg3: subtle separators */
+@define-color border-emphasis #928374;  /* --grey2: emphasized borders */
+@define-color border-urgent #ea6962;  /* --red: urgent/error borders */
+
+/*
+ * Usage in wofi CSS files:
+ * 
+ * @import "/home/caleb/Projects/arch-dotfiles/colors/gruvbox-material-wofi.css";
+ * 
+ * Then use the defined colors:
+ * background-color: @base;
+ * color: @text;
+ * border: 1px solid @border;
+ * 
+ * For advanced styling:
+ * background-color: @bg-hover;
+ * color: @accent-blue;
+ * border: 2px solid @border-emphasis;
+ */
