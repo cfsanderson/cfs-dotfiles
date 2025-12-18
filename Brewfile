@@ -5,7 +5,6 @@ brew "xz"
 brew "openssl@3"
 brew "readline"
 brew "sqlite"
-brew "python@3.13"
 brew "asdf"
 brew "bat"
 brew "btop"
@@ -16,7 +15,6 @@ brew "fd"
 brew "gawk"
 brew "gnupg"
 brew "pkgconf"
-brew "icu4c@76"
 brew "gdal"
 brew "gh"
 brew "glow"
@@ -26,6 +24,7 @@ brew "mas"
 brew "neovim"
 brew "newsboat"
 brew "ninja"
+brew "python@3.13"
 brew "nmap"
 brew "pngpaste"
 brew "python@3.12"
@@ -46,7 +45,6 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "sass/sass/sass"
 brew "teamookla/speedtest/speedtest"
-cask "alacritty"
 cask "alfred"
 cask "amethyst"
 cask "font-fira-code-nerd-font"
@@ -56,12 +54,8 @@ cask "keycastr"
 cask "ngrok"
 cask "raycast"
 cask "vscodium"
-mas "Airmail", id: 918858936
-mas "Bear", id: 1091189122
-mas "Cardhop", id: 1290358394
-mas "Cinebench", id: 1438772273
 mas "GarageBand", id: 682658836
-mas "HP Smart", id: 1474276998
+mas "HP", id: 1474276998
 mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "keymapp", id: 6472865291
