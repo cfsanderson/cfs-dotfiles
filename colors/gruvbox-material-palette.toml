@@ -1,0 +1,85 @@
+# CFS Gruvbox Material Color Palette - TOML format
+# For applications like yazi, starship, etc. that use TOML configuration
+# Copy color values from this file into your TOML configs
+
+[colors]
+# Background colors (darkest to lightest)
+bg_dim = "#141617"        # Darkest background - unused areas, deep shadows
+bg0 = "#1a1919"           # Main background - primary window background
+bg1 = "#282828"           # Secondary background - panels, status bars  
+bg2 = "#282828"           # Tertiary background - same as bg1 in this variant
+bg3 = "#3c3836"           # UI element background - buttons, input fields
+bg4 = "#3c3836"           # Interactive element background - same as bg3
+bg5 = "#504945"           # Highlighted background - hover states, selections
+
+# Dark colors (for borders, separators)
+dark0 = "#1d2021"         # Darkest structural element
+dark1 = "#282828"         # Dark structural element
+dark2 = "#32302f"         # Medium dark structural element  
+dark3 = "#3c3836"         # Light dark structural element
+dark4 = "#504945"         # Lightest dark structural element
+
+# Foreground colors (main text)
+fg0 = "#e5dac7"           # Primary foreground - main text, bright emphasis
+fg1 = "#ddc7a1"           # Secondary foreground - subtext, less emphasis
+
+# Grey colors (UI elements, muted text)
+grey0 = "#504945"         # Dark grey - disabled states, subtle backgrounds
+grey1 = "#928374"         # Medium grey - muted text, secondary elements
+grey2 = "#a89984"         # Light grey - borders, active elements
+
+# Semantic colors
+red = "#ea6962"           # Error, danger, urgent states
+orange = "#e78a4e"        # Modified, changed states  
+yellow = "#d8a657"        # Warning, caution, highlights
+green = "#a9b665"         # Success, safe, positive states
+aqua = "#89b482"          # Special accents, unique highlights
+blue = "#7daea3"          # Information, links, navigation
+purple = "#d3869b"        # Special elements, metadata
+
+# Special purpose combinations
+[workspace]
+active = "#e5dac7"        # Active workspace indicators
+inactive = "#504945"      # Inactive workspace indicators
+urgent = "#ea6962"        # Urgent workspace indicators
+hover = "#928374"         # Hover state for workspace elements
+
+[borders]
+subtle = "#3c3836"        # Subtle borders between elements
+emphasis = "#928374"      # Emphasized borders, active window borders
+urgent = "#ea6962"        # Urgent/error borders
+
+[text]
+primary = "#e5dac7"       # Primary readable text
+secondary = "#ddc7a1"     # Secondary readable text
+muted = "#928374"         # Muted/disabled text
+on_dark = "#e5dac7"       # Text on dark backgrounds
+on_colored = "#1a1919"    # Text on colored backgrounds (for readability)
+
+[surfaces]
+lowest = "#1a1919"        # Lowest elevation surface
+low = "#282828"           # Low elevation surface
+medium = "#3c3836"        # Medium elevation surface
+high = "#504945"          # High elevation surface
+
+# Example usage patterns:
+
+# For yazi theme.toml:
+# [mgr]
+# cwd = { fg = "#d8a657" }  # yellow for current directory
+# 
+# [status] 
+# progress_label = { fg = "#e5dac7", bold = true }  # fg0 for progress
+# progress_error = { fg = "#ea6962", bg = "#3c3836" }  # red on bg3
+#
+# [select]
+# border = { fg = "#928374" }  # grey1 for selection borders
+
+# For starship config:
+# [character]
+# success_symbol = "[➜](bold #a9b665)"  # green
+# error_symbol = "[➜](bold #ea6962)"    # red
+
+# For other TOML configs:
+# Simply reference the hex values from the [colors] section above
+# Example: foreground = "#e5dac7"  # Use fg0 for primary text

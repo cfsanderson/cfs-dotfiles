@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CFS Gruvbox Material Color Palette</title>
+	<style>
+		@import url("./gruvbox-material-palette.css");
+
+		body {
+			font-family: 'CaskaydiaMono Nerd Font', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+			background-color: var(--bg0);
+			color: var(--fg0);
+			margin: 0;
+			padding: 20px;
+			line-height: 1.6;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			color: var(--fg0);
+			text-align: center;
+			border-bottom: 2px solid var(--border-emphasis);
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+
+		.section {
+			margin-bottom: 40px;
+			background-color: var(--bg1);
+			border-radius: 8px;
+			padding: 20px;
+			border: 1px solid var(--border-subtle);
+		}
+
+		.section h2 {
+			color: var(--fg0);
+			margin-top: 0;
+			margin-bottom: 20px;
+			border-bottom: 1px solid var(--border-subtle);
+			padding-bottom: 8px;
+		}
+
+		.color-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 15px;
+		}
+
+		.color-item {
+			display: flex;
+			align-items: center;
+			background-color: var(--bg3);
+			border-radius: 6px;
+			padding: 12px;
+			border: 1px solid var(--border-subtle);
+			transition: background-color 0.2s ease;
+		}
+
+		.color-item:hover {
+			background-color: var(--highlight-bg);
+		}
+
+		.color-block {
+			width: 50px;
+			height: 50px;
+			border-radius: 4px;
+			margin-right: 15px;
+			border: 2px solid var(--border-subtle);
+			flex-shrink: 0;
+		}
+
+		.color-info {
+			flex: 1;
+		}
+
+		.color-name {
+			font-weight: bold;
+			color: var(--fg0);
+			margin-bottom: 4px;
+		}
+
+		.color-hex {
+			font-family: 'Courier New', monospace;
+			color: var(--text-secondary);
+			margin-bottom: 4px;
+		}
+
+		.color-description {
+			color: var(--text-muted);
+			font-size: 0.9em;
+		}
+
+		/* Background colors */
+		.bg-dim {
+			background-color: var(--bg-dim);
+		}
+
+		.bg0 {
+			background-color: var(--bg0);
+		}
+
+		.bg1 {
+			background-color: var(--bg1);
+		}
+
+		.bg2 {
+			background-color: var(--bg2);
+		}
+
+		.bg3 {
+			background-color: var(--bg3);
+		}
+
+		.bg4 {
+			background-color: var(--bg4);
+		}
+
+		.bg5 {
+			background-color: var(--bg5);
+		}
+
+		/* Foreground colors */
+		.fg0 {
+			background-color: var(--fg0);
+		}
+
+		.fg1 {
+			background-color: var(--fg1);
+		}
+
+		/* Semantic colors */
+		.red {
+			background-color: var(--red);
+		}
+
+		.orange {
+			background-color: var(--orange);
+		}
+
+		.yellow {
+			background-color: var(--yellow);
+		}
+
+		.green {
+			background-color: var(--green);
+		}
+
+		.aqua {
+			background-color: var(--aqua);
+		}
+
+		.blue {
+			background-color: var(--blue);
+		}
+
+		.purple {
+			background-color: var(--purple);
+		}
+
+		/* Grey colors */
+		.grey0 {
+			background-color: var(--grey0);
+		}
+
+		.grey1 {
+			background-color: var(--grey1);
+		}
+
+		.grey2 {
+			background-color: var(--grey2);
+		}
+
+		/* Background status colors */
+		.bg-red {
+			background-color: var(--bg-red);
+		}
+
+		.bg-green {
+			background-color: var(--bg-green);
+		}
+
+		.bg-yellow {
+			background-color: var(--bg-yellow);
+		}
+
+		/* UI specific colors */
+		.workspace-active {
+			background-color: var(--workspace-active);
+		}
+
+		.workspace-inactive {
+			background-color: var(--workspace-inactive);
+		}
+
+		.border-emphasis {
+			background-color: var(--border-emphasis);
+		}
+
+		.border-subtle {
+			background-color: var(--border-subtle);
+		}
+
+		.usage-examples {
+			margin-top: 30px;
+		}
+
+		.example-block {
+			background-color: var(--bg3);
+			border: 1px solid var(--border-emphasis);
+			border-radius: 6px;
+			padding: 15px;
+			margin-bottom: 15px;
+		}
+
+		.example-title {
+			color: var(--workspace-active);
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+
+		.example-text-primary {
+			color: var(--text-primary);
+		}
+
+		.example-text-secondary {
+			color: var(--text-secondary);
+		}
+
+		.example-text-muted {
+			color: var(--text-muted);
+		}
+
+		.example-error {
+			color: var(--red);
+			background-color: var(--bg-red);
+			padding: 5px 8px;
+			border-radius: 3px;
+			display: inline-block;
+			margin: 5px 0;
+		}
+
+		.example-success {
+			color: var(--text-on-colored);
+			background-color: var(--green);
+			padding: 5px 8px;
+			border-radius: 3px;
+			display: inline-block;
+			margin: 5px 0;
+		}
+
+		.example-warning {
+			color: var(--text-on-colored);
+			background-color: var(--yellow);
+			padding: 5px 8px;
+			border-radius: 3px;
+			display: inline-block;
+			margin: 5px 0;
+		}
+
+		.copy-hex {
+			cursor: pointer;
+			padding: 2px 6px;
+			border-radius: 3px;
+			background-color: var(--bg5);
+			border: 1px solid var(--border-subtle);
+			font-size: 0.8em;
+			margin-left: 8px;
+			transition: all 0.2s ease;
+		}
+
+		.copy-hex:hover {
+			background-color: var(--highlight-bg);
+			border-color: var(--border-emphasis);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>CFS Gruvbox Material Color Palette</h1>
+		<p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">
+			Based on <a
+				href='https://github.com/cfsanderson/cfs-gruvbox-material/'>cfsanderson/cfs-gruvbox-material</a>
+			• Material foreground + Hard background
+		</p>
+
+		<!-- Background Colors -->
+		<div class="section">
+			<h2>Background Colors</h2>
+			<div class="color-grid">
+				<div class="color-item">
+					<div class="color-block bg-dim"></div>
+					<div class="color-info">
+						<div class="color-name">bg-dim</div>
+						<div class="color-hex">#141617 <span class="copy-hex"
+								onclick="copyToClipboard('#141617')">copy</span></div>
+						<div class="color-description">Darkest background - unused areas, deep
+							shadows</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block bg0"></div>
+					<div class="color-info">
+						<div class="color-name">bg0</div>
+						<div class="color-hex">#1a1919 <span class="copy-hex"
+								onclick="copyToClipboard('#1a1919')">copy</span></div>
+						<div class="color-description">Main background - primary window
+							background (from Normal)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block bg1"></div>
+					<div class="color-info">
+						<div class="color-name">bg1</div>
+						<div class="color-hex">#282828 <span class="copy-hex"
+								onclick="copyToClipboard('#282828')">copy</span></div>
+						<div class="color-description">Secondary background - panels, status
+							bars (from StatusLine)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block bg3"></div>
+					<div class="color-info">
+						<div class="color-name">bg3</div>
+						<div class="color-hex">#3c3836 <span class="copy-hex"
+								onclick="copyToClipboard('#3c3836')">copy</span></div>
+						<div class="color-description">UI element background - buttons, input
+							fields (from Visual)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block bg5"></div>
+					<div class="color-info">
+						<div class="color-name">bg5</div>
+						<div class="color-hex">#504945 <span class="copy-hex"
+								onclick="copyToClipboard('#504945')">copy</span></div>
+						<div class="color-description">Highlighted background - hover states,
+							selections (from TabLine)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Foreground Colors -->
+		<div class="section">
+			<h2>Foreground Colors</h2>
+			<div class="color-grid">
+				<div class="color-item">
+					<div class="color-block fg0"></div>
+					<div class="color-info">
+						<div class="color-name">fg0</div>
+						<div class="color-hex">#e5dac7 <span class="copy-hex"
+								onclick="copyToClipboard('#e5dac7')">copy</span></div>
+						<div class="color-description">Primary foreground - main text, bright
+							emphasis (from Normal)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block fg1"></div>
+					<div class="color-info">
+						<div class="color-name">fg1</div>
+						<div class="color-hex">#ddc7a1 <span class="copy-hex"
+								onclick="copyToClipboard('#ddc7a1')">copy</span></div>
+						<div class="color-description">Secondary foreground - subtext, less
+							emphasis (from StatusLine)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Semantic Colors -->
+		<div class="section">
+			<h2>Semantic Colors</h2>
+			<div class="color-grid">
+				<div class="color-item">
+					<div class="color-block red"></div>
+					<div class="color-info">
+						<div class="color-name">red</div>
+						<div class="color-hex">#ea6962 <span class="copy-hex"
+								onclick="copyToClipboard('#ea6962')">copy</span></div>
+						<div class="color-description">Errors, deletion, urgent states</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block orange"></div>
+					<div class="color-info">
+						<div class="color-name">orange</div>
+						<div class="color-hex">#e78a4e <span class="copy-hex"
+								onclick="copyToClipboard('#e78a4e')">copy</span></div>
+						<div class="color-description">Warnings, modified states, orange accents
+						</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block yellow"></div>
+					<div class="color-info">
+						<div class="color-name">yellow</div>
+						<div class="color-hex">#d8a657 <span class="copy-hex"
+								onclick="copyToClipboard('#d8a657')">copy</span></div>
+						<div class="color-description">Warnings, pending states, highlights
+						</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block green"></div>
+					<div class="color-info">
+						<div class="color-name">green</div>
+						<div class="color-hex">#a9b665 <span class="copy-hex"
+								onclick="copyToClipboard('#a9b665')">copy</span></div>
+						<div class="color-description">Success, addition, safe states</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block aqua"></div>
+					<div class="color-info">
+						<div class="color-name">aqua</div>
+						<div class="color-hex">#a9b665 <span class="copy-hex"
+								onclick="copyToClipboard('#a9b665')">copy</span></div>
+						<div class="color-description">Info, cyan accents, special highlights
+						</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block blue"></div>
+					<div class="color-info">
+						<div class="color-name">blue</div>
+						<div class="color-hex">#7daea3 <span class="copy-hex"
+								onclick="copyToClipboard('#7daea3')">copy</span></div>
+						<div class="color-description">Links, info states, blue accents</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block purple"></div>
+					<div class="color-info">
+						<div class="color-name">purple</div>
+						<div class="color-hex">#d3869b <span class="copy-hex"
+								onclick="copyToClipboard('#d3869b')">copy</span></div>
+						<div class="color-description">Special elements, purple accents</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Grey Scale -->
+		<div class="section">
+			<h2>Grey Scale</h2>
+			<div class="color-grid">
+				<div class="color-item">
+					<div class="color-block grey0"></div>
+					<div class="color-info">
+						<div class="color-name">grey0</div>
+						<div class="color-hex">#504945 <span class="copy-hex"
+								onclick="copyToClipboard('#504945')">copy</span></div>
+						<div class="color-description">Dark grey - disabled text, subtle borders
+							(from LineNr)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block grey1"></div>
+					<div class="color-info">
+						<div class="color-name">grey1</div>
+						<div class="color-hex">#928374 <span class="copy-hex"
+								onclick="copyToClipboard('#928374')">copy</span></div>
+						<div class="color-description">Medium grey - secondary text, muted
+							elements (from Comment)</div>
+					</div>
+				</div>
+
+				<div class="color-item">
+					<div class="color-block grey2"></div>
+					<div class="color-info">
+						<div class="color-name">grey2</div>
+						<div class="color-hex">#928374 <span class="copy-hex"
+								onclick="copyToClipboard('#928374')">copy</span></div>
+						<div class="color-description">Light grey - active borders, emphasized
+							subtle elements (from CursorLineNr)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Usage Examples -->
+		<div class="section usage-examples">
+			<h2>Usage Examples</h2>
+
+			<div class="example-block">
+				<div class="example-title">Text Hierarchy</div>
+				<div class="example-text-primary">Primary text using --text-primary</div>
+				<div class="example-text-secondary">Secondary text using --text-secondary</div>
+				<div class="example-text-muted">Muted text using --text-muted</div>
+			</div>
+
+			<div class="example-block">
+				<div class="example-title">Status Messages</div>
+				<div class="example-error">Error message using --red</div>
+				<div class="example-warning">Warning message using --yellow</div>
+				<div class="example-success">Success message using --green</div>
+			</div>
+
+			<div class="example-block">
+				<div class="example-title">UI Elements</div>
+				<div
+					style="background-color: var(--workspace-active); color: var(--text-on-colored); padding: 8px; border-radius: 4px; display: inline-block; margin-right: 10px;">
+					Active Workspace</div>
+				<div
+					style="background-color: var(--workspace-inactive); color: var(--text-on-dark); padding: 8px; border-radius: 4px; display: inline-block; margin-right: 10px;">
+					Inactive Workspace</div>
+				<div
+					style="border: 2px solid var(--border-emphasis); color: var(--text-primary); padding: 8px; border-radius: 4px; display: inline-block;">
+					Emphasized Border</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function copyToClipboard(text) {
+			navigator.clipboard.writeText(text).then(function () {
+				// Visual feedback
+				event.target.textContent = 'copied!';
+				event.target.style.backgroundColor = 'var(--green)';
+				event.target.style.color = 'var(--text-on-colored)';
+
+				setTimeout(function () {
+					event.target.textContent = 'copy';
+					event.target.style.backgroundColor = '';
+					event.target.style.color = '';
+				}, 1000);
+			}).catch(function (err) {
+				console.error('Could not copy text: ', err);
+			});
+		}
+	</script>
+</body>
+
+</html>
