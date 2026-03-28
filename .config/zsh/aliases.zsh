@@ -33,7 +33,7 @@ mkdir_cd() {
 alias newbrew='brew update && brew upgrade && brew cleanup'
 alias notes='cd $HOME/Projects/.notes && nvim 003_DUMP.md'
 alias nv='nvim'
-alias pihole='ssh pi@192.168.4.38'
+alias pihole='ssh pihole'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias showpaths='defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder'
 alias sourz='source $HOME/.config/zsh/.zshrc'
